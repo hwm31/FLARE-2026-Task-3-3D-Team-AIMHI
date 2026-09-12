@@ -1,1 +1,1 @@
-# -FLARE-2026-Task-3---3D-Track-Team-AIMHI
+# [FLARE2026 Task 3-3D Track] TeamAIMHI
