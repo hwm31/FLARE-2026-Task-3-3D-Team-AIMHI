@@ -1,0 +1,5 @@
+{
+  "rule": "chest:thr0.2,abd:thr0.2",
+  "why": "Measured on the submitted global adapter (mtstruct): chest:thr0.2 scores 0.3938 while chest:top5 scores 0.3530 (-0.0408). The code default chest:top5 was chosen for an earlier model and must not be reused with this one.",
+  "measured_on": "FLARE 2026 validation split, 681 cases, 2026-09-06"
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.npy
+*.npz
+*.nii.gz
+*.safetensors
+*.bin
+ckpt/
+preds/
+results/
+logs/

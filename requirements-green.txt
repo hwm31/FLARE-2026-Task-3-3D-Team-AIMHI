@@ -1,0 +1,20 @@
+# GREEN scoring environment (Python 3.11): flare3d/score_green.py.
+# green-score is the package by Ostmeier and Delbrouck (MIT); the judge model StanfordAIMI/GREEN-RadLlama2-7b
+# is downloaded from the Hugging Face Hub on first use.
+# The exact snapshot of this environment is environment/green-py311.freeze.txt.
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.4.0+cu121
+transformers==4.44.0
+accelerate==1.13.0
+peft==0.12.0
+sentence-transformers==3.0.1
+scikit-learn==1.9.0
+datasets==3.2.0
+tokenizers==0.19.1
+sentencepiece==0.2.1
+pandas==2.2.2
+numpy==1.26.4
+pyarrow==25.0.1
+matplotlib==3.11.1
+green-score==0.0.12
+typing_extensions>=4.0  # torch imports it. Our environment snapshot lacks it and score_green.py failed until it was provided.

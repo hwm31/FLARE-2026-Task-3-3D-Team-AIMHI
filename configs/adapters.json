@@ -1,0 +1,43 @@
+{
+  "_note": "FLARE_MM_HIDDEN, FLARE_N_QUERIES and FLARE_PROJ are read off the checkpoints by `python flare3d/ref_config.py <ckpt_dir>`. FLARE_GLOBAL_CTX is a prompt-format switch and cannot be read from weights: the global adapter was trained and is run with the local questions inserted into its prompt. An empty FLARE_PROJ selects the attention-pool projector; 'attnpool' is not a valid value.",
+  "global": {
+    "checkpoint": "mtstruct",
+    "FLARE_MM_HIDDEN": 768,
+    "FLARE_N_QUERIES": 512,
+    "FLARE_PROJ": "direct",
+    "FLARE_GLOBAL_CTX": 1,
+    "train_split": "stage2_mtstruct",
+    "epochs": 3,
+    "label_rule": "chest:thr0.2,abd:thr0.2"
+  },
+  "local": {
+    "checkpoint": "m3d_rag",
+    "FLARE_MM_HIDDEN": 768,
+    "FLARE_N_QUERIES": 32,
+    "FLARE_PROJ": "",
+    "FLARE_GLOBAL_CTX": 0,
+    "train_split": "stage2_rag",
+    "epochs": 3
+  },
+  "report": {
+    "checkpoint": "report_m3d_nos1",
+    "FLARE_MM_HIDDEN": 768,
+    "FLARE_N_QUERIES": 512,
+    "FLARE_PROJ": "",
+    "FLARE_GLOBAL_CTX": 0,
+    "train_split": "report_fillnatural",
+    "epochs": 8
+  },
+  "shared": {
+    "lora_r": 64,
+    "lora_alpha": 128,
+    "lora_dropout": 0.05,
+    "learning_rate": 0.0002,
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "per_device_batch": 4,
+    "grad_accum": 4,
+    "max_length": 2048,
+    "stage1_pretraining": false
+  }
+}
